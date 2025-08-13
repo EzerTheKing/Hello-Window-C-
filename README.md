@@ -31,4 +31,4 @@ bazel build //...
 ## Result:
 
 My photo result:
-![logo]()
+![logo](https://github.com/EzerTheKing/HelloWindow_Bazel_C/blob/main/photo/IMG_20250813_203624_447da.jpg)
