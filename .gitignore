@@ -1,0 +1,5 @@
+/MODULE.bazel.lock
+/bazel-bin
+/bazel-GLFWcBazel
+/bazel-out
+/bazel-testlogs
