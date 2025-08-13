@@ -29,6 +29,6 @@ bazel query //:*
 bazel build //...
 ```
 ## Result:
-```
-Hello Window, Bro.! ☜(ˆ▿ˆc)
-```
+
+My photo result:
+![logo]()
