@@ -10,17 +10,12 @@ short vMAJOR, vMINOR;
 int main(void) {
 
     // size Window
-    width = 800;
-    height = 400;
+    width = 640;
+    height = 480;
 
     // Version
     vMAJOR = 3;
     vMINOR = 4;
-
-    if (!glfwInit()) {
-        fprintf(stderr, "Failed to initialize GLFW (>‿◠)✌\n");
-        return 1;
-    }
 
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, vMAJOR);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, vMINOR);
@@ -28,26 +23,39 @@ int main(void) {
 
     GLFWwindow* window;
 
-    window = glfwCreateWindow(width, height, "Hello Window", NULL, NULL); // create window bro.!!!
-    if (!window) {
-        fprintf(stderr, "Lol by to failed to create window\n");
+        /* Initialize the library */
+        if (!glfwInit()){
+            printf("Failed to initialize GLFW (>‿◠)✌\n");
+            return -1;
+        }
+
+        /* Create a windowed mode window and its OpenGL context */
+        window = glfwCreateWindow(width, height, "Hello World", NULL, NULL);
+        if (!window)
+        {
+            printf("Lol by to failed to create window\n");
+            glfwTerminate();
+            return -1;
+        }
+
+        /* Make the window's context current */
+        glfwMakeContextCurrent(window);
+
+        /* Loop until the user closes the window */
+        while (!glfwWindowShouldClose(window))
+        {
+            /* Render here */
+            glClearColor(0.05f, 0.10f, 0.25f, 1.0f); // color GL
+            glClear(GL_COLOR_BUFFER_BIT);
+
+            /* Swap front and back buffers */
+            glfwSwapBuffers(window);
+
+            /* Poll for and process events */
+            glfwPollEvents();
+        }
+
+        glfwDestroyWindow(window);
         glfwTerminate();
-        return 1;
-    }
-
-    glfwMakeContextCurrent(window);
-    glfwSwapInterval(1); // vsync
-
-    while (!glfwWindowShouldClose(window)) {
-
-        glClearColor(0.05f, 0.10f, 0.25f, 1.0f); // color GL
-        glClear(GL_COLOR_BUFFER_BIT);
-
-        glfwSwapBuffers(window);
-        glfwPollEvents();
-    }
-
-    glfwDestroyWindow(window);
-    glfwTerminate();
-    return 0;
+        return 0;
 }
