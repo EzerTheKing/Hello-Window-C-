@@ -2,7 +2,7 @@
 
 ## Git Copy Repo the PC:
 ```
-git clone https://github.com/EzerTheKing/Hello-Window-C-.git
+git clone https://github.com/EzerTheKing/HelloWindow_Bazel_C.git
 ```
 ## Installing Packages.
 Sorry user Windows, i love Linux.:) (͡° ͜ʖ ͡°)
