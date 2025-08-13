@@ -1,6 +1,3 @@
-/MODULE.bazel.lock
-/bazel-bin
-/bazel-GLFWcBazel
-/bazel-out
-/bazel-testlogs
-/MODULE.bazel
+bazel*
+MODULE.bazel
+MODULE.bazel.lock

@@ -29,8 +29,8 @@ int main(void) {
             return -1;
         }
 
-        /* Create a windowed mode window and its OpenGL context */
-        window = glfwCreateWindow(width, height, "Hello World", NULL, NULL);
+        /* Hello Window Bro */
+        window = glfwCreateWindow(width, height, "HelloWindow", NULL, NULL);
         if (!window)
         {
             printf("Lol by to failed to create window\n");
